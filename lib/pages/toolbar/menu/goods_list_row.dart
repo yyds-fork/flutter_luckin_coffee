@@ -4,8 +4,8 @@ import 'package:flutter_luckin_coffee/utils/global.dart';
 
 class GoodsListRow extends StatelessWidget {
   final bool border;
-  final String activeDesc;
-  final Function onPress;
+  final String? activeDesc;
+  final Function(BuildContext)? onPress;
   final MockGoods data;
 
   /// 创建商品
@@ -16,7 +16,7 @@ class GoodsListRow extends StatelessWidget {
   /// @param {Function} onPress - 点击添加按钮
   /// @param {GoodsListDatum} data
   /// ```
-  GoodsListRow({this.border = true, this.activeDesc, this.onPress, this.data});
+  GoodsListRow({this.border = true, this.activeDesc, this.onPress, required this.data});
 
   /// 商品信息中的文本
   ///
@@ -26,8 +26,7 @@ class GoodsListRow extends StatelessWidget {
   /// @param {FontWeight} fontWeight
   /// @param {Color} color
   /// ```
-  Widget row(String title,
-      {double fontSize = 11, FontWeight fontWeight, Color color}) {
+  Widget row(String title, {double fontSize = 11, FontWeight? fontWeight, Color? color}) {
     return Row(
       children: <Widget>[
         Expanded(
@@ -59,7 +58,7 @@ class GoodsListRow extends StatelessWidget {
   }
 
   ///活动信息
-  Widget activeMsg({String text}) {
+  Widget activeMsg({String? text}) {
     return text == null
         ? Container()
         : Positioned(
@@ -113,9 +112,7 @@ class GoodsListRow extends StatelessWidget {
                             color: Color.fromRGBO(56, 56, 56, 1),
                             fontSize: 15,
                             fontWeight: FontWeight.bold),
-                        row(data.characteristic.isEmpty
-                            ? ''
-                            : data.characteristic),
+                        row(data.characteristic.isEmpty ? '' : data.characteristic),
                         row(""),
                         Container(
                           margin: EdgeInsets.only(top: 4),
@@ -142,7 +139,7 @@ class GoodsListRow extends StatelessWidget {
                                   ),
                                   onTap: () {
                                     if (onPress != null) {
-                                      onPress(context);
+                                      onPress!(context);
                                     }
                                   })
                             ],

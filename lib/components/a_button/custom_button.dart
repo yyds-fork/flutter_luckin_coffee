@@ -29,22 +29,22 @@ class CustomButton {
     },
   };
 
-  Widget widget;
+  late Widget widget;
 
-  static Color _bgColor;
-  static Color _color;
-  static Color _borderColor;
+  static Color? _bgColor;
+  static Color? _color;
+  static Color? _borderColor;
 
-  final String type;
-  final Color color;
-  final Color bgColor;
-  final Color borderColor;
-  final double width;
-  final double height;
+  final String? type;
+  final Color? color;
+  final Color? bgColor;
+  final Color? borderColor;
+  final double? width;
+  final double? height;
   final bool plain;
-  final VoidCallback onPressed;
-  final EdgeInsetsGeometry padding;
-  final BorderRadius borderRadius;
+  final VoidCallback? onPressed;
+  final EdgeInsetsGeometry? padding;
+  final BorderRadius? borderRadius;
 
   CustomButton.normal(
       {this.width,
@@ -53,11 +53,11 @@ class CustomButton {
       this.color,
       this.bgColor,
       this.borderColor,
-      this.plain,
+      this.plain = false,
       this.onPressed,
       this.padding,
       this.borderRadius,
-      Widget child}) {
+      required Widget child}) {
     _setColor();
 
     widget = _init(child);
@@ -70,12 +70,12 @@ class CustomButton {
     this.color,
     this.bgColor,
     this.borderColor,
-    this.plain,
+    this.plain = false,
     this.onPressed,
     this.padding,
     this.borderRadius,
-    Widget textChild,
-    Widget icon,
+    Widget? textChild,
+    Widget? icon,
   }) {
     _setColor();
 
@@ -89,12 +89,12 @@ class CustomButton {
     this.color,
     this.bgColor,
     this.borderColor,
-    this.plain,
+    this.plain = false,
     this.onPressed,
     this.padding,
     this.borderRadius,
-    Widget textChild,
-    Widget loadingChild,
+    Widget? textChild,
+    Widget? loadingChild,
   }) {
     _setColor();
 
@@ -114,26 +114,26 @@ class CustomButton {
     return Container(
       width: width,
       height: height,
-      child: FlatButton(
-        padding: padding == null ? EdgeInsets.all(0) : padding,
-        shape: RoundedRectangleBorder(
-            borderRadius:
-                borderRadius == null ? BorderRadius.circular(4) : borderRadius,
-            side: BorderSide(
-                width: 1, color: !plain ? Colors.transparent : _borderColor)),
-        materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-        child: child,
-        textColor: _color,
-        color: _bgColor,
-        splashColor: onPressed == null ? Colors.transparent : null,
-        highlightColor: onPressed == null ? Colors.transparent : null,
-        disabledColor: _bgColor,
-        onPressed: onPressed == null ? () {} : onPressed,
-      ),
+      child: TextButton(onPressed: onPressed == null ? () {} : onPressed, child: child),
+
+      // child: FlatButton(
+      //   padding: padding == null ? EdgeInsets.all(0) : padding,
+      //   shape: RoundedRectangleBorder(
+      //       borderRadius: borderRadius == null ? BorderRadius.circular(4) : borderRadius,
+      //       side: BorderSide(width: 1, color: !plain ? Colors.transparent : _borderColor)),
+      //   materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+      //   child: child,
+      //   textColor: _color,
+      //   color: _bgColor,
+      //   splashColor: onPressed == null ? Colors.transparent : null,
+      //   highlightColor: onPressed == null ? Colors.transparent : null,
+      //   disabledColor: _bgColor,
+      //   onPressed: onPressed == null ? () {} : onPressed,
+      // ),
     );
   }
 
-  _initIcon(Widget textChild, Widget icon) {
+  _initIcon(Widget? textChild, Widget? icon) {
     Widget iconChild = Row(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -188,16 +188,14 @@ class CustomButton {
       if (borderColor == null) {
         _borderColor = onPressed == null ? $bgColor.withOpacity(.5) : $bgColor;
       } else {
-        _borderColor =
-            onPressed == null ? $borderColor.withOpacity(.5) : $borderColor;
+        _borderColor = onPressed == null ? $borderColor.withOpacity(.5) : $borderColor;
       }
 
       _bgColor = bgColor ?? Color(0xfffff);
     } else {
       _color = onPressed == null ? $color.withOpacity(.5) : $color;
       _bgColor = onPressed == null ? $bgColor.withOpacity(.5) : $bgColor;
-      _borderColor =
-          onPressed == null ? $borderColor.withOpacity(.5) : $borderColor;
+      _borderColor = onPressed == null ? $borderColor.withOpacity(.5) : $borderColor;
     }
   }
 }

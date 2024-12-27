@@ -49,8 +49,7 @@ class _HomeState extends State<Home> {
                 ARow(
                   height: 70,
                   padding: EdgeInsets.all(0),
-                  leftChild:
-                      leftChild(title: '火车南站', desc: '距您53m', titleBlod: false),
+                  leftChild: leftChild(title: '火车南站', desc: '距您53m', titleBlod: false),
                   rightChild: TakeOutBtn(),
                 ),
                 ARow(
@@ -83,15 +82,13 @@ class _HomeState extends State<Home> {
                   padding: EdgeInsets.all(0),
                   leftChild: leftChild(title: '送Ta咖啡', desc: 'SEND COFFEE'),
                   rightChild: rightChild(
-                    icon: Icon(Icons.coffee,
-                        size: 20, color: Color.fromRGBO(104, 68, 60, 1)),
+                    icon: Icon(Icons.coffee, size: 20, color: Color.fromRGBO(104, 68, 60, 1)),
                   ),
                 ),
                 ARow(
                   height: 70,
                   padding: EdgeInsets.all(0),
-                  leftChild:
-                      leftChild(title: '企业账号', desc: 'ENTERPRISE ACCOUNT'),
+                  leftChild: leftChild(title: '企业账号', desc: 'ENTERPRISE ACCOUNT'),
                   rightChild: rightChild(
                     icon: Icon(
                       Icons.article_rounded,
@@ -112,15 +109,14 @@ class _HomeState extends State<Home> {
     );
   }
 
-  Widget rightChild({Icon icon, Color bgColor, bool showBorder = true}) {
+  Widget rightChild({Icon? icon, Color? bgColor, bool showBorder = true}) {
     return Container(
       width: 40,
       height: 40,
       decoration: BoxDecoration(
         color: bgColor,
         border: Border.all(
-          color:
-              showBorder ? Color.fromRGBO(99, 71, 58, 1) : Colors.transparent,
+          color: showBorder ? Color.fromRGBO(99, 71, 58, 1) : Colors.transparent,
         ),
         borderRadius: BorderRadius.circular(20),
       ),
@@ -131,7 +127,7 @@ class _HomeState extends State<Home> {
     );
   }
 
-  Column leftChild({String title, String desc, bool titleBlod = true}) {
+  Column leftChild({String? title, String? desc, bool titleBlod = true}) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -139,7 +135,7 @@ class _HomeState extends State<Home> {
         Row(
           children: <Widget>[
             Text(
-              title,
+              title ?? '',
               style: TextStyle(
                   color: Color.fromRGBO(56, 56, 56, 1),
                   fontSize: 16,
@@ -150,9 +146,8 @@ class _HomeState extends State<Home> {
         Row(
           children: <Widget>[
             Text(
-              desc,
-              style: TextStyle(
-                  color: Color.fromRGBO(128, 128, 128, 1), fontSize: 12),
+              desc ?? '',
+              style: TextStyle(color: Color.fromRGBO(128, 128, 128, 1), fontSize: 12),
             )
           ],
         )

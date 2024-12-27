@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_luckin_coffee/utils/global.dart';
 
 class GoodsMsgRow extends StatelessWidget {
-  GoodsMsgRow({Key key, this.marginBottom = true});
+  GoodsMsgRow({Key? key, this.marginBottom = true});
 
   /// 底部距离
   final bool marginBottom;
@@ -43,8 +43,7 @@ class GoodsMsgRow extends StatelessWidget {
             children: <Widget>[
               Text(
                 'x23',
-                style: TextStyle(
-                    color: Color.fromRGBO(80, 80, 80, 1), fontSize: 13),
+                style: TextStyle(color: Color.fromRGBO(80, 80, 80, 1), fontSize: 13),
               ),
               Container(
                 margin: EdgeInsets.only(left: 80),

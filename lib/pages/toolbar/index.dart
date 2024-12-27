@@ -6,7 +6,7 @@ import 'package:flutter_luckin_coffee/pages/toolbar/order/index.dart';
 import 'package:flutter_luckin_coffee/pages/toolbar/shopping_cart/index.dart';
 
 class Toolbar extends StatefulWidget {
-  Toolbar({Key key}) : super(key: key);
+  Toolbar({Key? key}) : super(key: key);
 
   @override
   State<Toolbar> createState() => _ToolbarState();

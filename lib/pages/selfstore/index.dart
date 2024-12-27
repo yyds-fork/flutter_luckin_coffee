@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_luckin_coffee/utils/global.dart';
 
 class SelfStore extends StatefulWidget {
-  SelfStore({Key key}) : super(key: key);
+  SelfStore({Key? key}) : super(key: key);
 
   _SelfStoreState createState() => _SelfStoreState();
 }
@@ -19,8 +19,7 @@ class _SelfStoreState extends State<SelfStore> {
             children: <Widget>[
               Text(
                 '北京',
-                style: TextStyle(
-                    color: Color.fromRGBO(56, 56, 56, 1), fontSize: 12),
+                style: TextStyle(color: Color.fromRGBO(56, 56, 56, 1), fontSize: 12),
               ),
               Icon(
                 IconData(0xe622, fontFamily: 'iconfont'),
@@ -74,13 +73,11 @@ class AddressRow extends StatelessWidget {
               children: <Widget>[
                 Text(
                   '青年汇店(No.1795)',
-                  style: TextStyle(
-                      color: Color.fromRGBO(56, 56, 56, 1), fontSize: 16),
+                  style: TextStyle(color: Color.fromRGBO(56, 56, 56, 1), fontSize: 16),
                 ),
                 Text(
                   '55m',
-                  style: TextStyle(
-                      color: Color.fromRGBO(56, 56, 56, 1), fontSize: 14),
+                  style: TextStyle(color: Color.fromRGBO(56, 56, 56, 1), fontSize: 14),
                 ),
               ],
             ),
@@ -106,9 +103,7 @@ class AddressRow extends StatelessWidget {
                         margin: EdgeInsets.only(top: 1),
                         child: Text(
                           '07:00 - 20:00',
-                          style: TextStyle(
-                              color: Color.fromRGBO(217, 217, 217, 1),
-                              fontSize: 12),
+                          style: TextStyle(color: Color.fromRGBO(217, 217, 217, 1), fontSize: 12),
                         ),
                       ),
                     ],
@@ -118,12 +113,9 @@ class AddressRow extends StatelessWidget {
                       InkWell(
                         child: Text(
                           '查看详情',
-                          style: TextStyle(
-                              color: Color.fromRGBO(85, 122, 157, 1),
-                              fontSize: 11),
+                          style: TextStyle(color: Color.fromRGBO(85, 122, 157, 1), fontSize: 11),
                         ),
-                        onTap: () =>
-                            Navigator.pushNamed(context, '/store_detail'),
+                        onTap: () => Navigator.pushNamed(context, '/store_detail'),
                       ),
                       Container(
                         margin: EdgeInsets.only(top: 2),
@@ -153,8 +145,7 @@ class AddressRow extends StatelessWidget {
                 Container(
                   child: Text(
                     '朝阳区朝阳北路青年汇102号楼一号3室',
-                    style: TextStyle(
-                        color: Color.fromRGBO(166, 166, 166, 1), fontSize: 12),
+                    style: TextStyle(color: Color.fromRGBO(166, 166, 166, 1), fontSize: 12),
                   ),
                 )
               ],

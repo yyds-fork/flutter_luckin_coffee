@@ -12,7 +12,7 @@ import 'widgets/classify_desc.dart';
 
 /// TODO: 待解决：点击左侧菜单，右侧商品列表跳转
 class Menu extends StatefulWidget {
-  static _MenuState _menuState;
+  late _MenuState _menuState;
 
   getAppBar() => _menuState.createAppBar();
 
@@ -24,7 +24,7 @@ class Menu extends StatefulWidget {
 }
 
 class _MenuState extends State<Menu> {
-  static int nowCategoryId; // 当前选中的菜单
+  static int nowCategoryId = 0; // 当前选中的菜单
   static double _nestedScrollOffet = 0;
 
   final ScrollController _nestedScrollController = new ScrollController();
@@ -38,7 +38,7 @@ class _MenuState extends State<Menu> {
   List<Widget> goodsListWidgets = [];
   List<MockGoodsCategory> category = MockGoodsCategory.data();
 
-  AppBar createAppBar() {
+  AppBar? createAppBar() {
     return null;
   }
 
@@ -121,9 +121,7 @@ class _MenuState extends State<Menu> {
             title: Text(
               '选择咖啡和小食',
               style: TextStyle(
-                  color: Color.fromRGBO(56, 56, 56, 1),
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold),
+                  color: Color.fromRGBO(56, 56, 56, 1), fontSize: 16, fontWeight: FontWeight.bold),
             ),
             backgroundColor: Colors.white,
             flexibleSpace: FlexibleSpaceBar(
@@ -147,8 +145,7 @@ class _MenuState extends State<Menu> {
         ];
       },
       body: Container(
-        padding: EdgeInsets.only(
-            top: _nestedScrollOffet >= 130 ? (_nestedScrollOffet - 130) : 0),
+        padding: EdgeInsets.only(top: _nestedScrollOffet >= 130 ? (_nestedScrollOffet - 130) : 0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
@@ -177,8 +174,7 @@ class _MenuState extends State<Menu> {
                               width: 1,
                             ),
                           ),
-                          color: Color(0xffffff)
-                              .withOpacity(nowCategoryId == index ? 1.0 : 0.0)),
+                          color: Color(0xffffff).withOpacity(nowCategoryId == index ? 1.0 : 0.0)),
                       child: Text(item.name),
                     ),
                   );
@@ -201,7 +197,7 @@ class _MenuState extends State<Menu> {
                 ),
                 onNotification: (ScrollNotification scrollInfo) {
                   // print(scrollInfo);
-                  return null;
+                  return true;
                 },
               ),
             )

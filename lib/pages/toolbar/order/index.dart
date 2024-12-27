@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'widgets/order_list_row.dart';
 
 class Order extends StatefulWidget {
-  Order({Key key}) : super(key: key);
+  Order({Key? key}) : super(key: key);
 
   @override
   State<Order> createState() => _OrderState();
@@ -22,7 +22,7 @@ class _OrderState extends State<Order> with TickerProviderStateMixin {
     ),
   ];
 
-  TabController _tabController;
+  late TabController _tabController;
 
   @override
   void initState() {
@@ -39,16 +39,12 @@ class _OrderState extends State<Order> with TickerProviderStateMixin {
         title: Text(
           "订单列表",
           style: TextStyle(
-              color: Color.fromRGBO(56, 56, 56, 1),
-              fontSize: 18,
-              fontWeight: FontWeight.bold),
+              color: Color.fromRGBO(56, 56, 56, 1), fontSize: 18, fontWeight: FontWeight.bold),
         ),
         bottom: PreferredSize(
           preferredSize: Size.fromHeight(44),
           child: Theme(
-            data: ThemeData(
-                splashColor: Colors.transparent,
-                highlightColor: Colors.transparent),
+            data: ThemeData(splashColor: Colors.transparent, highlightColor: Colors.transparent),
             child: TabBar(
               tabs: tabs,
               labelColor: Color.fromRGBO(136, 175, 213, 1),
@@ -73,8 +69,8 @@ class _OrderState extends State<Order> with TickerProviderStateMixin {
                     goodsName: '榛果拿铁',
                     price: 20,
                     time: '2019-01-08 08:05',
-                    onPress: () => Navigator.pushNamed(context, '/order_detail',
-                        arguments: {"status": 2})),
+                    onPress: () =>
+                        Navigator.pushNamed(context, '/order_detail', arguments: {"status": 2})),
                 OrderListRow(
                   2,
                   orderNum: '23847563928174',

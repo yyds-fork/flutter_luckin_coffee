@@ -10,18 +10,13 @@ import 'global.dart';
 /// @param {bool} borderBottom - 是否显示底部border
 /// ```
 AppBar customAppbar(
-    {BuildContext context,
-    String title = '',
-    bool borderBottom = true,
-    List actions}) {
+    {BuildContext? context, String title = '', bool borderBottom = true, List<Widget>? actions}) {
   return AppBar(
     centerTitle: true,
     title: Text(
       title,
       style: TextStyle(
-          color: Color.fromRGBO(56, 56, 56, 1),
-          fontSize: 18,
-          fontWeight: FontWeight.bold),
+          color: Color.fromRGBO(56, 56, 56, 1), fontSize: 18, fontWeight: FontWeight.bold),
     ),
     backgroundColor: Colors.white,
     elevation: 0,

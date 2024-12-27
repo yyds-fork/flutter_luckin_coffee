@@ -5,7 +5,7 @@ import 'package:flutter_luckin_coffee/utils/global.dart';
 import 'package:get/get.dart';
 
 class OrderEvaluation extends StatefulWidget {
-  OrderEvaluation({Key key}) : super(key: key);
+  OrderEvaluation({Key? key}) : super(key: key);
 
   _OrderEvaluationState createState() => _OrderEvaluationState();
 }
@@ -38,9 +38,7 @@ class _OrderEvaluationState extends State<OrderEvaluation> {
                           children: <Widget>[
                             Text(
                               '“满意”',
-                              style: TextStyle(
-                                  color: Color.fromRGBO(56, 56, 56, 1),
-                                  fontSize: 18),
+                              style: TextStyle(color: Color.fromRGBO(56, 56, 56, 1), fontSize: 18),
                             )
                           ],
                         ),
@@ -85,8 +83,7 @@ class _OrderEvaluationState extends State<OrderEvaluation> {
                                   keyboardType: TextInputType.multiline,
                                   decoration: InputDecoration(
                                       filled: true,
-                                      focusColor:
-                                          Color.fromRGBO(248, 248, 248, 1),
+                                      focusColor: Color.fromRGBO(248, 248, 248, 1),
                                       counterText: '',
                                       border: OutlineInputBorder(
                                         borderSide: BorderSide.none,
@@ -97,11 +94,8 @@ class _OrderEvaluationState extends State<OrderEvaluation> {
                                       contentPadding: EdgeInsets.all(10),
                                       hintText: '请输入评价内容（可不填）',
                                       hintStyle: TextStyle(
-                                          fontSize: 14,
-                                          color:
-                                              Color.fromRGBO(166, 166, 166, 1)),
-                                      fillColor:
-                                          Color.fromRGBO(248, 248, 248, 1)),
+                                          fontSize: 14, color: Color.fromRGBO(166, 166, 166, 1)),
+                                      fillColor: Color.fromRGBO(248, 248, 248, 1)),
                                 ),
                               )
                             ],

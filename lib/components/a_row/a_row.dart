@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 class ARow extends StatelessWidget {
   final double height;
-  final Widget leftChild;
-  final Widget centerChild;
-  final Widget rightChild;
-  final EdgeInsets padding;
-  final EdgeInsets margin;
-  final Border border;
-  final Color color;
-  final Function onPressed;
+  final Widget? leftChild;
+  final Widget? centerChild;
+  final Widget? rightChild;
+  final EdgeInsets? padding;
+  final EdgeInsets? margin;
+  final Border? border;
+  final Color? color;
+  final Function? onPressed;
 
   /// ARow 行
   ///
@@ -25,7 +25,7 @@ class ARow extends StatelessWidget {
   /// @param {Function} onPressed 点击回调
   /// ```
   ARow(
-      {Key key,
+      {Key? key,
       this.height = 44,
       this.padding,
       this.leftChild,
@@ -47,29 +47,26 @@ class ARow extends StatelessWidget {
         decoration: BoxDecoration(
             color: color == null ? Colors.white : color,
             border: border == null
-                ? Border(
-                    bottom: BorderSide(
-                        width: 1, color: Color.fromRGBO(242, 242, 242, 1)))
+                ? Border(bottom: BorderSide(width: 1, color: Color.fromRGBO(242, 242, 242, 1)))
                 : border),
-        padding:
-            padding == null ? EdgeInsets.symmetric(horizontal: 15) : padding,
+        padding: padding == null ? EdgeInsets.symmetric(horizontal: 15) : padding,
         margin: margin == null ? EdgeInsets.all(0) : margin,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             // left
-            leftChild == null ? Container() : leftChild,
+            leftChild == null ? Container() : leftChild!,
 
             // center
-            Expanded(child: centerChild == null ? Container() : centerChild),
+            Expanded(child: centerChild == null ? Container() : centerChild!),
 
             // right
-            rightChild == null ? Container() : rightChild
+            rightChild == null ? Container() : rightChild!
           ],
         ),
       ),
-      onTap: () => onPressed == null ? () {} : onPressed(),
+      onTap: () => onPressed == null ? () {} : onPressed!(),
     );
   }
 }

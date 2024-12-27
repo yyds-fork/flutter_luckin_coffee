@@ -8,7 +8,7 @@ import 'package:get/get.dart';
 import 'widgets/goods_msg_row.dart';
 
 class OrderConfirm extends StatefulWidget {
-  OrderConfirm({Key key}) : super(key: key);
+  OrderConfirm({Key? key}) : super(key: key);
 
   _OrderConfirmState createState() => _OrderConfirmState();
 }
@@ -39,8 +39,7 @@ class _OrderConfirmState extends State<OrderConfirm> {
                           contentAddress(),
                           // 订单信息
                           Container(
-                            padding:
-                                EdgeInsets.only(top: 12, left: 15, right: 15),
+                            padding: EdgeInsets.only(top: 12, left: 15, right: 15),
                             decoration: BoxDecoration(border: cuBorderBottom()),
                             child: Column(
                               children: <Widget>[
@@ -52,8 +51,7 @@ class _OrderConfirmState extends State<OrderConfirm> {
                                         '订单信息',
                                         style: TextStyle(
                                             fontSize: 13,
-                                            color:
-                                                Color.fromRGBO(56, 56, 56, 1),
+                                            color: Color.fromRGBO(56, 56, 56, 1),
                                             fontWeight: FontWeight.bold),
                                       )
                                     ],
@@ -74,8 +72,7 @@ class _OrderConfirmState extends State<OrderConfirm> {
 
                           // 结算
                           Container(
-                            padding: EdgeInsets.symmetric(
-                                vertical: 12, horizontal: 15),
+                            padding: EdgeInsets.symmetric(vertical: 12, horizontal: 15),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: <Widget>[
@@ -84,16 +81,14 @@ class _OrderConfirmState extends State<OrderConfirm> {
                                     Text(
                                       '合计',
                                       style: TextStyle(
-                                          color: Color.fromRGBO(80, 80, 80, 1),
-                                          fontSize: 13),
+                                          color: Color.fromRGBO(80, 80, 80, 1), fontSize: 13),
                                     ),
                                     Container(
                                       margin: EdgeInsets.only(left: 10),
                                       child: Text(
                                         '¥ 28',
                                         style: TextStyle(
-                                            color:
-                                                Color.fromRGBO(56, 56, 56, 1),
+                                            color: Color.fromRGBO(56, 56, 56, 1),
                                             fontWeight: FontWeight.bold,
                                             fontSize: 16),
                                       ),
@@ -119,17 +114,14 @@ class _OrderConfirmState extends State<OrderConfirm> {
                             child: Container(
                               padding: EdgeInsets.symmetric(vertical: 14),
                               child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: <Widget>[
                                   Row(
                                     children: <Widget>[
                                       Text(
                                         '使用优惠券',
                                         style: TextStyle(
-                                            color: Color.fromRGBO(
-                                                136, 175, 213, 1),
-                                            fontSize: 14),
+                                            color: Color.fromRGBO(136, 175, 213, 1), fontSize: 14),
                                       ),
                                     ],
                                   ),
@@ -138,16 +130,13 @@ class _OrderConfirmState extends State<OrderConfirm> {
                                       Text(
                                         '1个可用',
                                         style: TextStyle(
-                                            fontSize: 14,
-                                            color: Color.fromRGBO(
-                                                255, 141, 26, 1)),
+                                            fontSize: 14, color: Color.fromRGBO(255, 141, 26, 1)),
                                       ),
                                       Container(
                                         margin: EdgeInsets.only(left: 5),
                                         child: Icon(
                                           Icons.arrow_forward_ios,
-                                          color:
-                                              Color.fromRGBO(228, 228, 228, 1),
+                                          color: Color.fromRGBO(228, 228, 228, 1),
                                           size: 16,
                                         ),
                                       )
@@ -176,9 +165,7 @@ class _OrderConfirmState extends State<OrderConfirm> {
                           children: <Widget>[
                             Text(
                               '备注特殊要求',
-                              style: TextStyle(
-                                  fontSize: 14,
-                                  color: Color.fromRGBO(56, 56, 56, 1)),
+                              style: TextStyle(fontSize: 14, color: Color.fromRGBO(56, 56, 56, 1)),
                             ),
                             Icon(
                               Icons.arrow_forward_ios,
@@ -187,8 +174,7 @@ class _OrderConfirmState extends State<OrderConfirm> {
                             )
                           ],
                         ),
-                        onTap: () =>
-                            Navigator.pushNamed(context, '/order_remark'),
+                        onTap: () => Navigator.pushNamed(context, '/order_remark'),
                       ),
                     ),
 
@@ -207,8 +193,7 @@ class _OrderConfirmState extends State<OrderConfirm> {
                                 child: Transform.scale(
                                   scale: .8,
                                   child: Checkbox(
-                                    activeColor:
-                                        Color.fromRGBO(136, 175, 213, 1),
+                                    activeColor: Color.fromRGBO(136, 175, 213, 1),
                                     value: true,
                                     onChanged: (flag) {},
                                   ),
@@ -220,16 +205,12 @@ class _OrderConfirmState extends State<OrderConfirm> {
                                     Text(
                                       '我已阅读并同意',
                                       style: TextStyle(
-                                          color:
-                                              Color.fromRGBO(128, 128, 128, 1),
-                                          fontSize: 10),
+                                          color: Color.fromRGBO(128, 128, 128, 1), fontSize: 10),
                                     ),
                                     Text(
                                       '《支付协议》',
                                       style: TextStyle(
-                                          fontSize: 10,
-                                          color:
-                                              Color.fromRGBO(85, 122, 157, 1)),
+                                          fontSize: 10, color: Color.fromRGBO(85, 122, 157, 1)),
                                     )
                                   ],
                                 ),
@@ -243,8 +224,7 @@ class _OrderConfirmState extends State<OrderConfirm> {
                                 Text(
                                   '温馨提示：仅支持开具电子发票，订单完成后可前往发票管理中开具',
                                   style: TextStyle(
-                                      color: Color.fromRGBO(166, 166, 166, 1),
-                                      fontSize: 10),
+                                      color: Color.fromRGBO(166, 166, 166, 1), fontSize: 10),
                                 )
                               ],
                             ),
@@ -296,8 +276,7 @@ class _OrderConfirmState extends State<OrderConfirm> {
                         height: 60,
                         color: Color.fromRGBO(255, 255, 255, 1),
                         borderRadius: BorderRadius.zero,
-                        onPressed: () => Get.toNamed('/order_detail',
-                            arguments: {"status": 1}))
+                        onPressed: () => Get.toNamed('/order_detail', arguments: {"status": 1}))
                   ],
                 ),
               ),
@@ -389,9 +368,7 @@ class _OrderConfirmState extends State<OrderConfirm> {
                   children: <Widget>[
                     Text(
                       '约',
-                      style: TextStyle(
-                          color: Color.fromRGBO(128, 128, 128, 1),
-                          fontSize: 13),
+                      style: TextStyle(color: Color.fromRGBO(128, 128, 128, 1), fontSize: 13),
                     ),
                     Text(
                       '14:42',
@@ -402,9 +379,7 @@ class _OrderConfirmState extends State<OrderConfirm> {
                     ),
                     Text(
                       '可取',
-                      style: TextStyle(
-                          color: Color.fromRGBO(128, 128, 128, 1),
-                          fontSize: 13),
+                      style: TextStyle(color: Color.fromRGBO(128, 128, 128, 1), fontSize: 13),
                     ),
                   ],
                 )

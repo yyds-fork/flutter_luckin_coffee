@@ -4,7 +4,7 @@ class MockGoodsCategory {
   final String name;
   final String desc;
 
-  MockGoodsCategory({this.name, this.desc});
+  MockGoodsCategory({required this.name, required this.desc});
 
   static List<MockGoodsCategory> _data = [];
 

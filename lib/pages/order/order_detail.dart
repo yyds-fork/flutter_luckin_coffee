@@ -6,13 +6,13 @@ import 'package:flutter_luckin_coffee/utils/global.dart';
 class OrderDetail extends StatefulWidget {
   final Map args;
 
-  OrderDetail({this.args});
+  OrderDetail({required this.args});
 
   _OrderDetailState createState() => _OrderDetailState();
 }
 
 class _OrderDetailState extends State<OrderDetail> {
-  static Map args;
+  late Map args;
 
   @override
   void initState() {
@@ -46,8 +46,7 @@ class _OrderDetailState extends State<OrderDetail> {
                   width: 55,
                   height: 16,
                   decoration: BoxDecoration(
-                      border:
-                          Border.all(color: Color.fromRGBO(217, 217, 217, 1)),
+                      border: Border.all(color: Color.fromRGBO(217, 217, 217, 1)),
                       borderRadius: BorderRadius.circular(4)),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -60,8 +59,7 @@ class _OrderDetailState extends State<OrderDetail> {
                       ),
                       Text(
                         '慢必赔',
-                        style: TextStyle(
-                            color: Color.fromRGBO(80, 80, 80, 1), fontSize: 10),
+                        style: TextStyle(color: Color.fromRGBO(80, 80, 80, 1), fontSize: 10),
                       )
                     ],
                   ),
@@ -75,13 +73,11 @@ class _OrderDetailState extends State<OrderDetail> {
                 children: <Widget>[
                   Text(
                     '预计',
-                    style: TextStyle(
-                        color: Color.fromRGBO(56, 56, 56, 1), fontSize: 12),
+                    style: TextStyle(color: Color.fromRGBO(56, 56, 56, 1), fontSize: 12),
                   ),
                   Text(
                     '15:15',
-                    style: TextStyle(
-                        color: Color.fromRGBO(144, 192, 239, 1), fontSize: 12),
+                    style: TextStyle(color: Color.fromRGBO(144, 192, 239, 1), fontSize: 12),
                   ),
                   Text(
                     '送达，请耐心等待luckin来临！',
@@ -154,13 +150,11 @@ class _OrderDetailState extends State<OrderDetail> {
                 children: <Widget>[
                   Text(
                     '请在',
-                    style: TextStyle(
-                        color: Color.fromRGBO(56, 56, 56, 1), fontSize: 12),
+                    style: TextStyle(color: Color.fromRGBO(56, 56, 56, 1), fontSize: 12),
                   ),
                   Text(
                     '15:15',
-                    style: TextStyle(
-                        color: Color.fromRGBO(144, 192, 239, 1), fontSize: 12),
+                    style: TextStyle(color: Color.fromRGBO(144, 192, 239, 1), fontSize: 12),
                   ),
                   Text(
                     '内完成支付，过时订单将会取消。',
@@ -250,15 +244,11 @@ class _OrderDetailState extends State<OrderDetail> {
                         children: <Widget>[
                           Text(
                             '外卖订单:33412823848583',
-                            style: TextStyle(
-                                color: Color.fromRGBO(128, 128, 128, 1),
-                                fontSize: 13),
+                            style: TextStyle(color: Color.fromRGBO(128, 128, 128, 1), fontSize: 13),
                           ),
                           Text(
                             '2019-01-07 14:22',
-                            style: TextStyle(
-                                color: Color.fromRGBO(128, 128, 128, 1),
-                                fontSize: 13),
+                            style: TextStyle(color: Color.fromRGBO(128, 128, 128, 1), fontSize: 13),
                           ),
                         ],
                       ),
@@ -281,8 +271,7 @@ class _OrderDetailState extends State<OrderDetail> {
                                         '拿铁',
                                         style: TextStyle(
                                             fontSize: 15,
-                                            color:
-                                                Color.fromRGBO(56, 56, 56, 1),
+                                            color: Color.fromRGBO(56, 56, 56, 1),
                                             fontWeight: FontWeight.bold),
                                       ),
                                     ),
@@ -302,8 +291,7 @@ class _OrderDetailState extends State<OrderDetail> {
                                     Text(
                                       'x3',
                                       style: TextStyle(
-                                          color: Color.fromRGBO(80, 80, 80, 1),
-                                          fontSize: 13),
+                                          color: Color.fromRGBO(80, 80, 80, 1), fontSize: 13),
                                     ),
                                     Container(
                                       margin: EdgeInsets.only(left: 80),
@@ -311,8 +299,7 @@ class _OrderDetailState extends State<OrderDetail> {
                                         '¥ 20',
                                         style: TextStyle(
                                             fontSize: 14,
-                                            color:
-                                                Color.fromRGBO(56, 56, 56, 1),
+                                            color: Color.fromRGBO(56, 56, 56, 1),
                                             fontWeight: FontWeight.bold),
                                       ),
                                     )
@@ -385,9 +372,8 @@ class _OrderDetailState extends State<OrderDetail> {
                             children: <Widget>[
                               Text(
                                 '实付',
-                                style: TextStyle(
-                                    color: Color.fromRGBO(56, 56, 56, 1),
-                                    fontSize: 14),
+                                style:
+                                    TextStyle(color: Color.fromRGBO(56, 56, 56, 1), fontSize: 14),
                               ),
                               Text(
                                 '￥21',
@@ -417,15 +403,11 @@ class _OrderDetailState extends State<OrderDetail> {
                       children: <Widget>[
                         Text(
                           '收货地址',
-                          style: TextStyle(
-                              color: Color.fromRGBO(56, 56, 56, 1),
-                              fontSize: 14),
+                          style: TextStyle(color: Color.fromRGBO(56, 56, 56, 1), fontSize: 14),
                         ),
                         Text(
                           '北京市朝阳区青年汇佳园10号楼102号楼...',
-                          style: TextStyle(
-                              color: Color.fromRGBO(128, 128, 128, 1),
-                              fontSize: 13),
+                          style: TextStyle(color: Color.fromRGBO(128, 128, 128, 1), fontSize: 13),
                         )
                       ],
                     ),
@@ -436,9 +418,7 @@ class _OrderDetailState extends State<OrderDetail> {
                         children: <Widget>[
                           Text(
                             'piu先生  13244234213',
-                            style: TextStyle(
-                                color: Color.fromRGBO(128, 128, 128, 1),
-                                fontSize: 13),
+                            style: TextStyle(color: Color.fromRGBO(128, 128, 128, 1), fontSize: 13),
                           )
                         ],
                       ),
@@ -450,8 +430,7 @@ class _OrderDetailState extends State<OrderDetail> {
               // module4
               Container(
                 margin: EdgeInsets.only(top: 10),
-                child: Image.asset('lib/assets/images/order/order2.png',
-                    height: 60),
+                child: Image.asset('lib/assets/images/order/order2.png', height: 60),
               )
             ],
           ),

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class CouponRow extends StatelessWidget {
   const CouponRow({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -18,8 +18,7 @@ class CouponRow extends StatelessWidget {
       child: Container(
           alignment: Alignment.center,
           decoration: BoxDecoration(
-            border:
-                Border.all(color: Color.fromRGBO(242, 242, 242, 1), width: 1),
+            border: Border.all(color: Color.fromRGBO(242, 242, 242, 1), width: 1),
             borderRadius: BorderRadius.all(Radius.circular(4)),
           ),
           child: Stack(
@@ -33,23 +32,18 @@ class CouponRow extends StatelessWidget {
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                           border: Border(
-                              right: BorderSide(
-                                  width: 1,
-                                  color: Color.fromRGBO(242, 242, 242, 1)))),
+                              right:
+                                  BorderSide(width: 1, color: Color.fromRGBO(242, 242, 242, 1)))),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Text(
                             '4',
-                            style: TextStyle(
-                                color: Color.fromRGBO(144, 192, 239, 1),
-                                fontSize: 34),
+                            style: TextStyle(color: Color.fromRGBO(144, 192, 239, 1), fontSize: 34),
                           ),
                           Text(
                             '.8折',
-                            style: TextStyle(
-                                color: Color.fromRGBO(144, 192, 239, 1),
-                                fontSize: 18),
+                            style: TextStyle(color: Color.fromRGBO(144, 192, 239, 1), fontSize: 18),
                           )
                         ],
                       ),
@@ -67,17 +61,15 @@ class CouponRow extends StatelessWidget {
                             children: <Widget>[
                               Text(
                                 '咖啡.果汁',
-                                style: TextStyle(
-                                    color: Color.fromRGBO(56, 56, 56, 1),
-                                    fontSize: 16),
+                                style:
+                                    TextStyle(color: Color.fromRGBO(56, 56, 56, 1), fontSize: 16),
                               ),
                               Container(
                                 margin: EdgeInsets.only(top: 7),
                                 child: Text(
                                   '有效期至2019-01-14',
                                   style: TextStyle(
-                                      color: Color.fromRGBO(166, 166, 166, 1),
-                                      fontSize: 12),
+                                      color: Color.fromRGBO(166, 166, 166, 1), fontSize: 12),
                                 ),
                               )
                             ],

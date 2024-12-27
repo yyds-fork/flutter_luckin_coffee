@@ -17,19 +17,11 @@ class G {
   static final GlobalKey<NavigatorState> navigatorKey = GlobalKey();
 
   /// toolbar routeName
-  static final List toobarRouteNameList = [
-    '/',
-    '/menu',
-    '/order',
-    '/shopping_cart',
-    '/mine'
-  ];
+  static final List toobarRouteNameList = ['/', '/menu', '/order', '/shopping_cart', '/mine'];
 
   /// 处理商品描述
   static String handleGoodsDesc(String str) {
-    return str
-        .replaceAll(RegExp(',\$'), '')
-        .replaceAll(RegExp('规格:|温度:|糖度:|奶油:|无'), '');
+    return str.replaceAll(RegExp(',\$'), '').replaceAll(RegExp('规格:|温度:|糖度:|奶油:|无'), '');
   }
 }
 
@@ -38,7 +30,7 @@ class G {
 /// @param {Color} color
 /// @param {bool} show  是否显示底部border
 /// ```
-Border cuBorderBottom({Color color, bool show = true}) {
+Border cuBorderBottom({Color? color, bool show = true}) {
   return Border(
     bottom: BorderSide(
       color: (color == null || !show)

@@ -14,7 +14,7 @@ description: flutter luckin coffee application（仿瑞幸咖啡）.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.10.0 <3.0.0"
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   flutter:
@@ -23,18 +23,18 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.4
-  flutter_swiper: 1.1.6
-  pull_to_refresh: ^2.0.0
-  json_annotation: ^4.5.0
-  dart_mock: ^2.0.0
-  get: ^4.6.3
+  flutter_swiper_null_safety_flutter3: ^4.0.3
+  pull_to_refresh_flutter3: ^2.0.2
+  json_annotation: ^4.9.0
+  dart_mock: ^2.0.1
+  get: ^4.6.6
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   test: any
-  build_runner: ^2.1.11
-  json_serializable: ^6.2.0
+  build_runner: ^2.4.13
+  json_serializable: ^6.9.2
   
 
 # For information on the generic Dart part of this file, see the

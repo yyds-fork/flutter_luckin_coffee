@@ -26,7 +26,11 @@ List<GetPage<dynamic>> pages = [
   GetPage(name: '/order_evaluation', page: () => OrderEvaluation()),
   GetPage(name: '/order_confirm', page: () => OrderConfirm()),
   GetPage(name: '/order_remark', page: () => OrderRemark()),
-  GetPage(name: '/order_detail', page: () => OrderDetail()),
+  GetPage(
+      name: '/order_detail',
+      page: () => OrderDetail(
+            args: {},
+          )),
   GetPage(name: '/coupon', page: () => Coupon()),
   GetPage(name: '/self_store', page: () => SelfStore()),
   GetPage(name: '/store_detail', page: () => StoreDetail()),

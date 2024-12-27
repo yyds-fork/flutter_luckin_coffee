@@ -5,7 +5,7 @@ import 'package:flutter_luckin_coffee/utils/global.dart';
 import 'package:get/get.dart';
 
 class Coupon extends StatefulWidget {
-  Coupon({Key key}) : super(key: key);
+  Coupon({Key? key}) : super(key: key);
 
   _CouponState createState() => _CouponState();
 }

@@ -7,13 +7,12 @@ import 'package:flutter_luckin_coffee/utils/global.dart';
 class ShoppingCartRow extends StatelessWidget {
   /// 购物车商品列表行
   const ShoppingCartRow({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ARow(
-      height: null,
       padding: EdgeInsets.symmetric(horizontal: 15),
       border: Border.all(color: Colors.transparent),
       leftChild: Container(
@@ -62,9 +61,7 @@ class ShoppingCartRow extends StatelessWidget {
                       children: <Widget>[
                         Text(
                           G.handleGoodsDesc("规格:中,温度:热,糖度:无糖"),
-                          style: TextStyle(
-                              color: Color.fromRGBO(80, 80, 80, 1),
-                              fontSize: 10),
+                          style: TextStyle(color: Color.fromRGBO(80, 80, 80, 1), fontSize: 10),
                         ),
                       ],
                     ),
@@ -72,9 +69,7 @@ class ShoppingCartRow extends StatelessWidget {
                       children: <Widget>[
                         Text(
                           '仅限打包带走',
-                          style: TextStyle(
-                              fontSize: 10,
-                              color: Color.fromRGBO(85, 122, 157, 1)),
+                          style: TextStyle(fontSize: 10, color: Color.fromRGBO(85, 122, 157, 1)),
                         )
                       ],
                     )
@@ -85,9 +80,7 @@ class ShoppingCartRow extends StatelessWidget {
             Text(
               '¥ 24',
               style: TextStyle(
-                  color: Color.fromRGBO(56, 56, 56, 1),
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold),
+                  color: Color.fromRGBO(56, 56, 56, 1), fontSize: 18, fontWeight: FontWeight.bold),
             ),
             Container(
                 margin: EdgeInsets.only(left: 10),

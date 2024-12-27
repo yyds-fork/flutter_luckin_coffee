@@ -5,12 +5,12 @@ import 'package:get/get.dart';
 
 class OrderListRow extends StatelessWidget {
   final int orderStatus;
-  final String address;
-  final String goodsName;
-  final String orderNum;
-  final String time;
-  final double price;
-  final Function onPress;
+  final String? address;
+  final String? goodsName;
+  final String? orderNum;
+  final String? time;
+  final double? price;
+  final Function()? onPress;
 
   /// 创建订单列表信息
   /// ```
@@ -22,12 +22,7 @@ class OrderListRow extends StatelessWidget {
   /// @param {double} price - 价格
   /// ```
   OrderListRow(this.orderStatus,
-      {this.address,
-      this.goodsName,
-      this.orderNum,
-      this.time,
-      this.price,
-      this.onPress});
+      {this.address, this.goodsName, this.orderNum, this.time, this.price, this.onPress});
 
   /// 文字状态
   Widget textStatus() {
@@ -107,7 +102,7 @@ class OrderListRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => onPress == null ? () {} : onPress(),
+      onTap: () => onPress == null ? () {} : onPress!(),
       child: Container(
         margin: EdgeInsets.symmetric(vertical: 10),
         padding: EdgeInsets.symmetric(horizontal: 15, vertical: 12),
@@ -123,8 +118,7 @@ class OrderListRow extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     '外卖订单：$orderNum',
-                    style: TextStyle(
-                        color: Color.fromRGBO(166, 166, 166, 1), fontSize: 12),
+                    style: TextStyle(color: Color.fromRGBO(166, 166, 166, 1), fontSize: 12),
                   ),
                   textStatus()
                 ],
@@ -144,8 +138,7 @@ class OrderListRow extends StatelessWidget {
                   ),
                   Text(
                     '$time',
-                    style: TextStyle(
-                        fontSize: 12, color: Color.fromRGBO(166, 166, 166, 1)),
+                    style: TextStyle(fontSize: 12, color: Color.fromRGBO(166, 166, 166, 1)),
                   )
                 ],
               ),

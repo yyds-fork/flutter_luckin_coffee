@@ -8,7 +8,7 @@ import 'package:get/get.dart';
 import 'widgets/shopping_cart_row.dart';
 
 class ShoppingCart extends StatefulWidget {
-  ShoppingCart({Key key}) : super(key: key);
+  ShoppingCart({Key? key}) : super(key: key);
 
   @override
   State<ShoppingCart> createState() => _ShoppingCartState();
@@ -32,8 +32,7 @@ class _ShoppingCartState extends State<ShoppingCart> {
             margin: EdgeInsets.only(top: 10, bottom: 32),
             child: Text(
               '您的购物车有点寂寞',
-              style: TextStyle(
-                  color: Color.fromRGBO(166, 166, 166, 1), fontSize: 12),
+              style: TextStyle(color: Color.fromRGBO(166, 166, 166, 1), fontSize: 12),
             ),
           ),
           AButton.normal(
@@ -135,9 +134,8 @@ class _ShoppingCartState extends State<ShoppingCart> {
                             margin: EdgeInsets.only(left: 5),
                             child: Text(
                               '换一批',
-                              style: TextStyle(
-                                  color: Color.fromRGBO(144, 192, 239, 1),
-                                  fontSize: 11),
+                              style:
+                                  TextStyle(color: Color.fromRGBO(144, 192, 239, 1), fontSize: 11),
                             ),
                           )
                         ],
@@ -183,9 +181,7 @@ class _ShoppingCartState extends State<ShoppingCart> {
           ? null
           : Container(
               decoration: BoxDecoration(
-                border: Border(
-                    top: BorderSide(
-                        width: 1, color: Color.fromRGBO(242, 242, 242, 1))),
+                border: Border(top: BorderSide(width: 1, color: Color.fromRGBO(242, 242, 242, 1))),
                 color: Colors.white,
               ),
               child: Row(

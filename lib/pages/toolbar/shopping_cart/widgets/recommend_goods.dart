@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_luckin_coffee/mock/goods_list.dart';
 
 class RecommendGoods extends StatelessWidget {
-  final Function onPress;
+  final Function()? onPress;
   final MockGoods data;
 
   /// 推荐商品
-  RecommendGoods({this.data, this.onPress});
+  RecommendGoods({required this.data, required this.onPress});
 
   /// 商品图片
   Widget goodsImg(String imgSrc) {
@@ -52,8 +52,7 @@ class RecommendGoods extends StatelessWidget {
                   Text(
                     '$desc',
                     overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                        color: Color.fromRGBO(166, 166, 166, 1), fontSize: 10),
+                    style: TextStyle(color: Color.fromRGBO(166, 166, 166, 1), fontSize: 10),
                   ),
                   Container(
                     margin: EdgeInsets.only(top: 15),

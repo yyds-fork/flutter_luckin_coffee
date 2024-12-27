@@ -4,7 +4,7 @@ import 'package:flutter_luckin_coffee/utils/global.dart';
 import 'package:get/get.dart';
 
 class LoginMethod extends StatelessWidget {
-  const LoginMethod({Key key}) : super(key: key);
+  const LoginMethod({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

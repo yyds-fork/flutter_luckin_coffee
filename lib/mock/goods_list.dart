@@ -9,11 +9,11 @@ class MockGoods {
   final String pic;
 
   const MockGoods({
-    this.categoryId,
-    this.characteristic,
-    this.originalPrice,
-    this.name,
-    this.pic,
+    required this.categoryId,
+    required this.characteristic,
+    required this.originalPrice,
+    required this.name,
+    required this.pic,
   });
 
   static List<MockGoods> _data = [];

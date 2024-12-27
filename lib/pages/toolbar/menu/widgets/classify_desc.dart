@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 
 class ClassifyDesc extends StatelessWidget {
   final String name;
-  final String desc;
+  final String? desc;
 
   /// 创建商品列表显示的分类介绍 每一类商品顶部有一个对该类商品的介绍
   /// ```
@@ -24,9 +24,7 @@ class ClassifyDesc extends StatelessWidget {
         Text(
           name,
           style: TextStyle(
-              fontSize: 12,
-              color: Color.fromRGBO(56, 56, 56, 1),
-              fontWeight: FontWeight.bold),
+              fontSize: 12, color: Color.fromRGBO(56, 56, 56, 1), fontWeight: FontWeight.bold),
         ),
         Expanded(
           child: Container(
@@ -81,7 +79,7 @@ class ClassifyDesc extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(top: 10, bottom: 10),
-      child: desc == null ? _createNotDesc(name) : _create(name, desc),
+      child: desc == null ? _createNotDesc(name) : _create(name, desc!),
     );
   }
 }

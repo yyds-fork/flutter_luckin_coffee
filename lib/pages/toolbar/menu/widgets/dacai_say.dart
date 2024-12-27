@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_luckin_coffee/utils/global.dart';
 
 class DacaiSay extends StatelessWidget {
-  final String avatar;
-  final String name;
+  final String? avatar;
+  final String? name;
   final String label;
   final String desc;
   final String time;
@@ -17,8 +17,7 @@ class DacaiSay extends StatelessWidget {
   /// @param {String} desc - 描述
   /// @param {String} time - 时间
   /// ```
-  DacaiSay(
-      {this.avatar, this.name, this.label = '', this.desc = '', this.time = ''})
+  DacaiSay({this.avatar, this.name, this.label = '', this.desc = '', this.time = ''})
       : assert(
           avatar != null,
           name != null,
@@ -41,7 +40,7 @@ class DacaiSay extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: new BorderRadius.circular(30),
                 child: Image.asset(
-                  avatar,
+                  avatar ?? '',
                   width: 30,
                   height: 30,
                   fit: BoxFit.cover,
@@ -58,7 +57,7 @@ class DacaiSay extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
                           Text(
-                            name,
+                            name ?? '',
                             style: TextStyle(fontSize: 12),
                           ),
                           Container(
@@ -69,9 +68,7 @@ class DacaiSay extends StatelessWidget {
                             margin: EdgeInsets.only(left: 5),
                             child: Text(
                               label,
-                              style: TextStyle(
-                                  color: Color.fromRGBO(53, 60, 177, 1),
-                                  fontSize: 10),
+                              style: TextStyle(color: Color.fromRGBO(53, 60, 177, 1), fontSize: 10),
                             ),
                           )
                         ],
@@ -86,8 +83,7 @@ class DacaiSay extends StatelessWidget {
                                 Text(
                                   desc,
                                   style: TextStyle(
-                                      fontSize: 12,
-                                      color: Color.fromRGBO(128, 128, 128, 1)),
+                                      fontSize: 12, color: Color.fromRGBO(128, 128, 128, 1)),
                                 ),
                               ],
                             )
@@ -98,9 +94,7 @@ class DacaiSay extends StatelessWidget {
                       alignment: Alignment.centerLeft,
                       child: Text(
                         time,
-                        style: TextStyle(
-                            color: Color.fromRGBO(136, 175, 213, 1),
-                            fontSize: 12),
+                        style: TextStyle(color: Color.fromRGBO(136, 175, 213, 1), fontSize: 12),
                       ),
                     )
                   ],

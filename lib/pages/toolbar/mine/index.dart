@@ -4,7 +4,7 @@ import 'package:flutter_luckin_coffee/utils/global.dart';
 import 'package:get/get.dart';
 
 class Mine extends StatefulWidget {
-  static _MineState _mineState;
+  late _MineState _mineState;
 
   getAppBar() => _mineState.createAppBar();
 
@@ -16,7 +16,7 @@ class Mine extends StatefulWidget {
 }
 
 class _MineState extends State<Mine> {
-  AppBar createAppBar() {
+  AppBar? createAppBar() {
     return null;
   }
 
@@ -220,8 +220,7 @@ class _MineState extends State<Mine> {
         margin: EdgeInsets.only(left: 10),
         child: Text(
           "UserName",
-          style:
-              TextStyle(color: Color.fromRGBO(255, 255, 255, 1), fontSize: 18),
+          style: TextStyle(color: Color.fromRGBO(255, 255, 255, 1), fontSize: 18),
         ),
       ),
       rightChild: Icon(

@@ -7,7 +7,7 @@ import 'select_row.dart';
 class GoodsDetailDialog extends StatefulWidget {
   final int id;
 
-  GoodsDetailDialog({Key key, this.id}) : super(key: key);
+  GoodsDetailDialog({Key? key, required this.id}) : super(key: key);
 
   _GoodsDetailDialogState createState() => _GoodsDetailDialogState();
 }
@@ -243,7 +243,7 @@ class _GoodsDetailDialogState extends State<GoodsDetailDialog> {
   }
 
   /// 收藏
-  Widget _circelIcon({Icon icon, Function onPress, Color bgColor}) {
+  Widget _circelIcon({required Icon icon, Function? onPress, Color? bgColor}) {
     return InkWell(
       child: Container(
           padding: EdgeInsets.all(5),

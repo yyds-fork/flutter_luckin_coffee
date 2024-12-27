@@ -5,7 +5,7 @@ import 'package:flutter_luckin_coffee/utils/global.dart';
 import 'package:get/get.dart';
 
 class OrderRemark extends StatefulWidget {
-  OrderRemark({Key key}) : super(key: key);
+  OrderRemark({Key? key}) : super(key: key);
 
   _OrderRemarkState createState() => _OrderRemarkState();
 }
@@ -52,9 +52,8 @@ class _OrderRemarkState extends State<OrderRemark> {
                               ),
                               contentPadding: EdgeInsets.all(10),
                               hintText: '请输入评价内容（可不填）',
-                              hintStyle: TextStyle(
-                                  fontSize: 14,
-                                  color: Color.fromRGBO(166, 166, 166, 1)),
+                              hintStyle:
+                                  TextStyle(fontSize: 14, color: Color.fromRGBO(166, 166, 166, 1)),
                               fillColor: Color.fromRGBO(248, 248, 248, 1)),
                         ),
                       )
@@ -96,8 +95,7 @@ class RemarkRow extends StatelessWidget {
             margin: EdgeInsets.only(bottom: 10),
             child: Text(
               title,
-              style:
-                  TextStyle(color: Color.fromRGBO(56, 56, 56, 1), fontSize: 14),
+              style: TextStyle(color: Color.fromRGBO(56, 56, 56, 1), fontSize: 14),
             ),
           ),
           Row(

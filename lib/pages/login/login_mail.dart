@@ -1,10 +1,9 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_luckin_coffee/components/a_button/index.dart';
 import 'package:flutter_luckin_coffee/utils/global.dart';
 
 class LoginMail extends StatefulWidget {
-  LoginMail({Key key}) : super(key: key);
+  LoginMail({Key? key}) : super(key: key);
 
   _LoginMailState createState() => _LoginMailState();
 }
@@ -14,7 +13,7 @@ class _LoginMailState extends State<LoginMail> {
   static Map code = {"value": null, "verify": true};
 
   /// 开始倒计时 时间
-  int startTime;
+  int startTime = 0;
 
   /// 当前倒计时 时间
   int countDownTime = 0;
@@ -87,9 +86,7 @@ class _LoginMailState extends State<LoginMail> {
                   Container(
                     height: 25,
                     decoration: BoxDecoration(
-                        border: Border(
-                            left: BorderSide(
-                                color: Color.fromRGBO(242, 242, 242, 1)))),
+                        border: Border(left: BorderSide(color: Color.fromRGBO(242, 242, 242, 1)))),
                   ),
                   buildGetEmailCode()
                 ],
@@ -116,17 +113,14 @@ class _LoginMailState extends State<LoginMail> {
                 children: <Widget>[
                   Text(
                     '点击确定，即表示以阅读并同意',
-                    style: TextStyle(
-                        fontSize: 12, color: Color.fromRGBO(153, 153, 153, 1)),
+                    style: TextStyle(fontSize: 12, color: Color.fromRGBO(153, 153, 153, 1)),
                   ),
                   InkWell(
                     child: Text(
                       '《注册会员服务条款》',
-                      style: TextStyle(
-                          color: Color.fromRGBO(85, 122, 157, 1), fontSize: 12),
+                      style: TextStyle(color: Color.fromRGBO(85, 122, 157, 1), fontSize: 12),
                     ),
-                    onTap: () =>
-                        Navigator.pushNamed(context, '/user_agreement'),
+                    onTap: () => Navigator.pushNamed(context, '/user_agreement'),
                   )
                 ],
               ),
